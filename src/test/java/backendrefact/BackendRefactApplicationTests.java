@@ -1,4 +1,4 @@
-package org.tfc2324.proyecto2324backendrefact;
+package backendrefact;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
