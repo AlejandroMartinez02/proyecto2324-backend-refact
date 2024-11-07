@@ -24,7 +24,7 @@ pipeline {
         stage('Ejecutar Tests') {
             steps {
                 echo 'Ejecutando tests...'
-                sh 'mvn test'
+                sh 'mvn test -DforkCount=1 -Dsurefire.timeout=180'
             }
         }
     }
@@ -33,6 +33,8 @@ pipeline {
         always {
             echo 'Pipeline completado, limpiando el workspace...'
             cleanWs()
+            sh 'pkill -f maven || true'
+            sh 'pkill -f java || true'
         }
         success {
             echo 'Pipeline ejecutado con éxito.'
