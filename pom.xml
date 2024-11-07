@@ -14,7 +14,7 @@
 	<name>proyecto2324-backend-refact</name>
 	<description>proyecto2324-backend-refact</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
